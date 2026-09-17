@@ -219,5 +219,190 @@
     }
 }
 </style>
+    <!-- SUPPORT FLOATING BUTTON -->
+<button class="support-btn" onclick="toggleSupport()">
+    🎧 <span>Support</span>
+</button>
+
+<!-- SUPPORT BOX -->
+<div class="support-box" id="supportBox">
+
+    <div class="support-header">
+        <strong>Customer Support</strong>
+        <button onclick="toggleSupport()">×</button>
+    </div>
+
+    <div class="support-content">
+
+        <p>Hi 👋<br>How can we help you?</p>
+
+        <!-- CALL -->
+        <a href="tel:+919876543210">
+            📞 Call Support
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/919876543210?text=Hello%2C%20I%20need%20support."
+           target="_blank">
+            💬 WhatsApp Support
+        </a>
+
+        <!-- EMAIL -->
+        <a href="mailto:support@example.com">
+            ✉️ Email Support
+        </a>
+
+    </div>
+
+</div>
+
+
+<style>
+
+.support-btn {
+    position: fixed;
+    bottom: 165px;
+    right: 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    padding: 15px 22px;
+
+    background: #6f42c1;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+    z-index: 9999;
+}
+
+
+.support-box {
+    display: none;
+
+    position: fixed;
+
+    bottom: 230px;
+    right: 25px;
+
+    width: 300px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 9999;
+}
+
+
+.support-header {
+    background: #6f42c1;
+    color: white;
+
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.support-header button {
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.support-content {
+    padding: 15px;
+}
+
+
+.support-content a {
+    display: block;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    background: #f5f5f5;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #222;
+}
+
+
+.support-content a:hover {
+    background: #eeeeee;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .support-btn {
+
+        width: 58px;
+        height: 58px;
+
+        padding: 0;
+
+        border-radius: 50%;
+
+        bottom: 160px;
+        right: 18px;
+    }
+
+    .support-btn span {
+        display: none;
+    }
+
+    .support-box {
+        width: 90%;
+        right: 5%;
+    }
+}
+
+</style>
+
+
+<script>
+
+function toggleSupport(){
+
+    const box = document.getElementById("supportBox");
+
+    if(box.style.display === "block"){
+        box.style.display = "none";
+    }
+    else{
+        box.style.display = "block";
+    }
+
+}
+
+</script>
 </body>
 </html>
