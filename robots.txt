@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ashishkumar6392portfolio.netlify.app/sitemap.xml
